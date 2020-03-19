@@ -22,6 +22,7 @@ message movieResponse {
     repeated MovieDetail Search = 1;
     string TotalResults = 2;
     string Response = 3;
+    string Error = 4;
 }
 
 service movieService {
