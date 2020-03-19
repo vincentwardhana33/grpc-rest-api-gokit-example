@@ -13,11 +13,6 @@ func encodeResponse(ctx context.Context, w http.ResponseWriter, response interfa
 }
 
 func decodeMovieRequest(ctx context.Context, r *http.Request) (interface{}, error) {
-	// vars := mux.Vars(r)
-
-	// searchword := r.URL.Query().Get("searchword")
-	// pagination := r.URL.Query().Get("pagination")
-
 	req := pb.MovieRequest{
 		Keyword:    r.URL.Query().Get("searchword"),
 		Pagination: r.URL.Query().Get("pagination"),
