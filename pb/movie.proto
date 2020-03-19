@@ -10,10 +10,6 @@ message movieRequest {
     int32 pagination = 2;
 }
 
-message Search {
-    repeated MovieDetail list = 1;
-}
-
 message MovieDetail {
     string Title = 1;
     string Year = 2;
@@ -23,8 +19,8 @@ message MovieDetail {
 }
 
 message movieResponse {
-    Search Search = 1;
-    string totalResults = 2;
+    repeated MovieDetail Search = 1;
+    string TotalResults = 2;
     string Response = 3;
 }
 
