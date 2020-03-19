@@ -7,7 +7,7 @@ option go_package = "pb";
 
 message movieRequest {
     string keyword = 1;
-    int32 pagination = 2;
+    string pagination = 2;
 }
 
 message MovieDetail {

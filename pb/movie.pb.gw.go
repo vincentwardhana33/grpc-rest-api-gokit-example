@@ -58,7 +58,7 @@ func request_MovieService_Hello_0(ctx context.Context, marshaler runtime.Marshal
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "pagination")
 	}
 
-	protoReq.Pagination, err = runtime.Int32(val)
+	protoReq.Pagination, err = runtime.String(val)
 
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "pagination", err)
@@ -96,7 +96,7 @@ func local_request_MovieService_Hello_0(ctx context.Context, marshaler runtime.M
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "pagination")
 	}
 
-	protoReq.Pagination, err = runtime.Int32(val)
+	protoReq.Pagination, err = runtime.String(val)
 
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "pagination", err)
