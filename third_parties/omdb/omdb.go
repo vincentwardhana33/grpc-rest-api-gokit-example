@@ -15,9 +15,9 @@ const (
 	ApiURL = "http://www.omdbapi.com"
 )
 
-func GetMovies(keyword string, pagination int) pb.MovieResponse {
+func GetMovies(keyword string, pagination string) pb.MovieResponse {
 	apikey := config.OmdbAPIKey
-	url := fmt.Sprintf("%s/?apikey=%s&s=%s&page=%d", ApiURL, apikey, keyword, pagination)
+	url := fmt.Sprintf("%s/?apikey=%s&s=%s&page=%s", ApiURL, apikey, keyword, pagination)
 	result := httpGetPublic(url)
 
 	var movies *pb.MovieResponse = &pb.MovieResponse{}
