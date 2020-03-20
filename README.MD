@@ -25,4 +25,9 @@ $ ```go run ./cmd```
 
 ### Command
 
+$ ```curl -XGET "localhost:8080/search?searchword={keyword}&pagination={page}"```
+
+
+### Command Example
+
 $ ```curl -XGET "localhost:8080/search?searchword=Spiderman&pagination=1"```
